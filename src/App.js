@@ -5,8 +5,7 @@ import Loader from 'react-loader-spinner';
 import ContactForm from './components/ContactForm';
 import ContactsList from './components/ContactList';
 import Filter from './components/Filter';
-import contactsOperations from './redux/contacts/contacts-operations';
-import contactsSelectors from './redux/contacts/contacts-selectors';
+import { contactsOperations, contactsSelectors } from './redux/contacts';
 
 import st from './App.module.css';
 
