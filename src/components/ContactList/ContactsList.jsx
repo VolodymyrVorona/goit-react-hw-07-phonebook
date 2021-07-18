@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import actions from '../../redux/contacts/contacts-operations';
+import operations from '../../redux/contacts/contacts-operations';
 import ContactListItem from './ContactListItem';
 
 const ContactsList = ({ contacts, onDeleteContact }) => {
-  console.log(actions);
   return (
     <ul>
       {contacts.map(({ name, number, id }) => (
@@ -36,7 +35,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onDeleteContact: id => dispatch(actions.deleteContact(id)),
+  onDeleteContact: id => dispatch(operations.deleteContact(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactsList);

@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 
-import actions from '../../redux/contacts/contacts-operations';
+import operations from '../../redux/contacts/contacts-operations';
 import st from './ContactForm.module.css';
 
 class Form extends Component {
@@ -73,11 +73,11 @@ class Form extends Component {
 }
 
 const mapStateToProps = state => {
-  return { contacts: [...state.contacts.items] };
+  return { contacts: state.contacts.items };
 };
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: contact => dispatch(actions.addContact(contact)),
+  onSubmit: contact => dispatch(operations.addContact(contact)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
