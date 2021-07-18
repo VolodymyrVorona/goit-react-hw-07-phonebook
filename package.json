@@ -12,6 +12,7 @@
     "modern-normalize": "^1.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-loader-spinner": "^4.0.0",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
@@ -22,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "server": "json-server --port 4040 --delay 250 --watch db.json"
+    "server": "json-server --port 4040 --delay 200 --watch db.json"
   },
   "eslintConfig": {
     "extends": [
